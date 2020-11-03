@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:background="@mipmap/moderndance"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="98dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:inputType="date"
+        android:text="Fecha"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/etEvento"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="113dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="131dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAcumular" />
+
+    <Spinner
+        android:id="@+id/comensales"
+        android:layout_width="177dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/arrayComensales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFecha" />
+
+    <Spinner
+        android:id="@+id/npers"
+        android:layout_width="141dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/arrayPers"
+        app:layout_constraintStart_toEndOf="@+id/comensales"
+        app:layout_constraintTop_toBottomOf="@+id/etEvento" />
+
+    <Button
+        android:id="@+id/btnAcumular"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Acumular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/importeGto" />
+
+    <TextView
+        android:id="@+id/personas2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="COMENSALES"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toEndOf="@+id/total2"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+
+    <TextView
+        android:id="@+id/total2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="43dp"
+        android:width="90dp"
+        android:text="TOTAL"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/tvPersonas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+
+    <TextView
+        android:id="@+id/precioxPersona2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:text="PRECIO x PERS"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toEndOf="@+id/personas2"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+
+    <TextView
+        android:id="@+id/tvPersonas"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:hint="Personas"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrecioxPersona"
+        app:layout_constraintStart_toEndOf="@+id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/personas2" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:width="90dp"
+        android:hint="Total"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total2" />
+
+    <TextView
+        android:id="@+id/tvPrecioxPersona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="29dp"
+        android:gravity="center"
+        android:hint="precio"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPersonas"
+        app:layout_constraintTop_toBottomOf="@+id/precioxPersona2" />
+
+    <EditText
+        android:id="@+id/importeGto"
+        android:layout_width="141dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comensales" />
+
+    <EditText
+        android:id="@+id/etEvento"
+        android:layout_width="183dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Evento"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etFecha"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Evento" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="386dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonas" />
+
+    <TextView
+        android:id="@+id/tvAcumulado"
+        android:layout_width="95dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/importeGto"
+        app:layout_constraintTop_toBottomOf="@+id/npers" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

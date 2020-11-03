@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">cFiestas</string>
+
+    <string-array name="arrayComensales">
+        <item> Comensales</item>
+        <item> Otros</item>
+        <item> Matilde</item>
+        <item> Merche</item>
+        <item> Pepi</item>
+    </string-array>
+
+    <string-array name="arrayPers">
+        <item> Personas</item>
+        <item> 0</item>
+        <item> 1</item>
+        <item> 2</item>
+        <item> 3</item>
+        <item> 4</item>
+        <item> 5</item>
+        <item> 6</item>
+
+
+    </string-array>
+
+</resources>
